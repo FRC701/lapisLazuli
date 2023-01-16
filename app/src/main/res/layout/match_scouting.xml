@@ -19,7 +19,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Match Auto"
-                android:textSize="45dp"
+                android:textSize="45sp"
                 android:textAlignment="center"/>
 
             <LinearLayout
@@ -34,7 +34,7 @@
                     android:ems="13"
                     android:text="Mobility"
                     android:textAlignment="center"
-                    android:textSize="25dp" />
+                    android:textSize="25sp" />
 
                 <RadioGroup
                     android:layout_width="match_parent"
@@ -80,7 +80,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:ems="13"
-                    android:textSize="25dp"
+                    android:textSize="25sp"
                     android:textAlignment="center"
                     android:text="Upper Row Placement" />
 
@@ -112,7 +112,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:ems="13"
-                    android:textSize="25dp"
+                    android:textSize="25sp"
                     android:textAlignment="center"
                     android:text="Mid Row Placement"/>
 
@@ -143,7 +143,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAlignment="center"
-                    android:textSize="25dp"
+                    android:textSize="25sp"
                     android:ems="13"
                     android:text="Bottom Row Placement"/>
 
@@ -173,7 +173,7 @@
                     android:id="@+id/tv_linksMAuto"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="25dp"
+                    android:textSize="25sp"
                     android:ems="13"
                     android:textAlignment="center"
                     android:text="Number of Links"/>
@@ -206,7 +206,7 @@
                     android:layout_height="wrap_content"
                     android:textAlignment="center"
                     android:ems="13"
-                    android:textSize="25dp"
+                    android:textSize="25sp"
                     android:text="Docked"/>
 
                 <RadioGroup
@@ -275,7 +275,75 @@
                 </RadioGroup>
             </LinearLayout>
 
+            <TextView
+                android:id="@+id/tv_matchTeleLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Match Tele"
+                android:textSize="45sp"
+                android:textAlignment="center"/>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/upperRowMTele"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="13"
+                    android:text="Upper Row Placement"
+                    android:textAlignment="center"
+                    android:textSize="25sp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_numOnUpperMTele"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="350dp"
+                        android:layout_height="wrap_content"
+                        android:hint="Ex.2" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view10"
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_MidRowMTele"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="13"
+                    android:textAlignment="center"
+                    android:textSize="25sp"
+                    android:text="Mid Row Placement" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_numOnMidMTele"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="350sp"
+                        android:layout_height="wrap_content"
+                        android:hint="Ex. 3" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view11"
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
 
 
         </LinearLayout>
