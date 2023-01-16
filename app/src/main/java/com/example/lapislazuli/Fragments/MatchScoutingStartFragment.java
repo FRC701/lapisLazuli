@@ -25,7 +25,7 @@ public class MatchScoutingStartFragment extends AppCompatActivity implements Ada
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.match_scouting_start);
+        setContentView(R.layout.fragment_match_scouting_start);
 
         Spinner roboNum = findViewById(R.id.robot_spinner);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.robotNumber, android.R.layout.simple_spinner_item);
