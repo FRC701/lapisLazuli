@@ -572,6 +572,17 @@
                 </RadioGroup>
             </LinearLayout>
 
+            <View
+                android:id="@+id/view16"
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <Button
+                android:id="@+id/bt_submitMatch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Submit" />
+
         </LinearLayout>
     </ScrollView>
 
