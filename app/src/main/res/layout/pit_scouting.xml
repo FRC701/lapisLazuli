@@ -460,8 +460,231 @@
                     android:text="dock" />
             </LinearLayout>
 
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp" />
+
+            <TextView
+                android:id="@+id/tv_pitAutoPreload"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="do you preload a cone/cube for auto?"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/bt_pitAutoPreloadCone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="cone"
+                        android:ems="5"/>
+
+                    <RadioButton
+                        android:id="@+id/bt_pitAutoPreloadCube"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="cube"
+                        android:ems="5"/>
+
+                    <RadioButton
+                        android:id="@+id/bt_pitAutoPreloadNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="none" />
+                </LinearLayout>
+
+            </RadioGroup>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp" />
+
+            <TextView
+                android:id="@+id/tv_pitTeleopHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed-light"
+                android:text="teleop questions!"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp" />
+
+            <TextView
+                android:id="@+id/tv_pitTeleopScoringPreference"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="do you have a scoring preference?"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                    <RadioButton
+                        android:id="@+id/bt_pitTeleopScoringPreferenceCone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="cone"
+                        android:ems="5"/>
+
+                    <RadioButton
+                        android:id="@+id/bt_pitTeleopScoringPreferenceCube"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="cube"
+                        android:ems="5"/>
+
+                    <RadioButton
+                        android:id="@+id/bt_pitTeleopScoringPreferenceNoPreference"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="no preference" />
+
+                    <RadioButton
+                        android:id="@+id/bt_pitTeleopScoringPreferenceNeither"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="neither" />
+
+                    <RadioButton
+                        android:id="@+id/bt_pitTeleopScoringPreferenceDefense"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="defense bot (doesn't score)" />
+
+            </RadioGroup>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp" />
+
+            <TextView
+                android:id="@+id/tv_pitTeleopCycleTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="whats your cycle time?"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/til_pitTeleopCycleTime">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="ex: 7 seconds" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp" />
+
+            <TextView
+                android:id="@+id/tv_pitTeleopNodes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="how many nodes can you score?"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/til_pitTeleopNodes">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="ex: 6 cones, 3 cubes" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp" />
+
+            <TextView
+                android:id="@+id/tv_pitEndGameHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed-light"
+                android:text="endgame questions!"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp" />
+
+            <TextView
+                android:id="@+id/tv_pitEndGamePlatform"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="can you get on the platform?"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/bt_pitEndGamePlatformYes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="yes"
+                        android:ems="10"/>
+
+                    <RadioButton
+                        android:id="@+id/bt_pitEndGamePlatformNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="no" />
+                </LinearLayout>
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tv_pitEndgamePlatformSuccess"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="what's your success rate at staying on the platform?"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/til_pitEndgamePlatformSuccess">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="ex: we never stay on, we always stay on" />
+            </com.google.android.material.textfield.TextInputLayout>
 
         </LinearLayout>
+
     </ScrollView>
 
 </LinearLayout>
