@@ -1,4 +1,2 @@
 package com.example.lapislazuli.Fragments;
-
-public class PitScoutingFragment {
-}
+public class PitScoutingFragment {}
