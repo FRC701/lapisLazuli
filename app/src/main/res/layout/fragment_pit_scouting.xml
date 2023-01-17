@@ -1,5 +1,704 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"/>
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_pitScoutingHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:text=" pit scouting"
+                android:textAlignment="center"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/tv_pitScouterName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="what's your name?"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="ex: bill, bob, sharol" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tv_pitScoutingTeamNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="what team are you scouting?"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+
+            <Spinner
+                android:id="@+id/pitSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="48dp" />
+
+            <TextView
+                android:id="@+id/tv_pitRobotHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed-light"
+                android:text="robot questions!"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp" />
+
+            <TextView
+                android:id="@+id/tv_pitRobotWeight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="how much does your robot weigh?"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/til_robotWeight">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="ex: 115lbs, 120lbs, 125lbs" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp" />
+
+            <TextView
+                android:id="@+id/tv_pitRobotDimensions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="what are the dimensions of your robot?"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/til_pitRobotDimensions">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="ex: 35x23x72.78"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp" />
+
+            <TextView
+                android:id="@+id/tv_pitRobotSpeed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="what is the speed of your robot?"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/til_pitRobotSpeed">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="ex: 16ft/sec"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp" />
+
+            <TextView
+                android:id="@+id/tv_pitOpenClosedChassis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="do you have an open or closed chassis?"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/bt_closedChassis"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="closed chassis"
+                        android:ems="10"/>
+
+                    <RadioButton
+                        android:id="@+id/bt_openChassis"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="open chassis" />
+                </LinearLayout>
+
+            </RadioGroup>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp" />
+
+            <TextView
+                android:id="@+id/tv_pitShiftingGearbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="do you have a shifting gearbox?"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/bt_pitYesShiftingGearbox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="yes"
+                        android:ems="10"/>
+
+                    <RadioButton
+                        android:id="@+id/bt_pitNoShiftingGearbox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="no" />
+                </LinearLayout>
+
+            </RadioGroup>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp" />
+
+            <TextView
+                android:id="@+id/tv_settingsShiftingGearbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="what are the settings on your shifting gearbox?"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="ex: 16 and 6" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp" />
+
+            <TextView
+                android:id="@+id/tv_DriveTrainType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="what type of drive train do you have?"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/til_pitDriveTrainType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="ex: west coast, swerve drive, H drive" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp" />
+
+            <TextView
+                android:id="@+id/tv_pitIntakeType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="what type of intake do you have?"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/til_pitIntakeType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="ex: claw, roller" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp" />
+
+            <TextView
+                android:id="@+id/tv_pitLiftingMechanismType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="what type of lifting mechanism?"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/til_pitLiftingMechanismType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="ex: telescope, elevator, arm " />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp" />
+
+            <TextView
+                android:id="@+id/tv_pitRobotProgrammingLanguage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="what programming language do you use for your robot?"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/til_pitRobotProgrammingLanguage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="ex: java, c++, python" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp" />
+
+            <TextView
+                android:id="@+id/tv_pitAppProgrammingLanguage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="what programming language do you use for your app?"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/til_pitAppProgrammingLanguage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="ex: java, kotlin, python" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp" />
+
+            <TextView
+                android:id="@+id/tv_pitCubeConeAmount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="how many cones/cubes do you hold at a time?"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/til_pitCubeConeAmount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="ex: 1, 2, 3" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp" />
+
+            <TextView
+                android:id="@+id/tv_pitAutoHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed-light"
+                android:text="auto questions!"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp" />
+
+            <TextView
+                android:id="@+id/tv_pitHaveAnAuto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="do you have an auto?"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/bt_pitYesAuto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="yes"
+                        android:ems="10"/>
+
+                    <RadioButton
+                        android:id="@+id/bt_pitNoAuto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="no" />
+                </LinearLayout>
+
+            </RadioGroup>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp" />
+
+            <TextView
+                android:id="@+id/tv_pitAutoActions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="what does your auto do?"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/cb_pitAutoMobility"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="mobility" />
+
+                <CheckBox
+                    android:id="@+id/cb_pitAutoPickUpCone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="pick up cone" />
+
+                <CheckBox
+                    android:id="@+id/cb_pitAutoPickUpCube"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="pick up cube" />
+
+                <CheckBox
+                    android:id="@+id/cb_pitAutoDock"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="dock" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp" />
+
+            <TextView
+                android:id="@+id/tv_pitAutoPreload"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="do you preload a cone/cube for auto?"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/bt_pitAutoPreloadCone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="cone"
+                        android:ems="5"/>
+
+                    <RadioButton
+                        android:id="@+id/bt_pitAutoPreloadCube"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="cube"
+                        android:ems="5"/>
+
+                    <RadioButton
+                        android:id="@+id/bt_pitAutoPreloadNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="none" />
+                </LinearLayout>
+
+            </RadioGroup>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp" />
+
+            <TextView
+                android:id="@+id/tv_pitTeleopHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed-light"
+                android:text="teleop questions!"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp" />
+
+            <TextView
+                android:id="@+id/tv_pitTeleopScoringPreference"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="do you have a scoring preference?"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                    <RadioButton
+                        android:id="@+id/bt_pitTeleopScoringPreferenceCone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="cone"
+                        android:ems="5"/>
+
+                    <RadioButton
+                        android:id="@+id/bt_pitTeleopScoringPreferenceCube"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="cube"
+                        android:ems="5"/>
+
+                    <RadioButton
+                        android:id="@+id/bt_pitTeleopScoringPreferenceNoPreference"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="no preference" />
+
+                    <RadioButton
+                        android:id="@+id/bt_pitTeleopScoringPreferenceNeither"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="neither" />
+
+                    <RadioButton
+                        android:id="@+id/bt_pitTeleopScoringPreferenceDefense"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="defense bot (doesn't score)" />
+
+            </RadioGroup>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp" />
+
+            <TextView
+                android:id="@+id/tv_pitTeleopCycleTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="whats your cycle time?"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/til_pitTeleopCycleTime">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="ex: 7 seconds" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp" />
+
+            <TextView
+                android:id="@+id/tv_pitTeleopNodes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="how many nodes can you score?"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/til_pitTeleopNodes">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="ex: 6 cones, 3 cubes" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp" />
+
+            <TextView
+                android:id="@+id/tv_pitEndGameHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed-light"
+                android:text="endgame questions!"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp" />
+
+            <TextView
+                android:id="@+id/tv_pitEndGamePlatform"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="can you get on the platform?"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/bt_pitEndGamePlatformYes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="yes"
+                        android:ems="10"/>
+
+                    <RadioButton
+                        android:id="@+id/bt_pitEndGamePlatformNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="no" />
+                </LinearLayout>
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tv_pitEndgamePlatformSuccess"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="what's your success rate at staying on the platform?"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/til_pitEndgamePlatformSuccess">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="ex: we never stay on, we always stay on" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/bt_submitPit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="submit"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
