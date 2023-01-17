@@ -7,17 +7,17 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_home"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="@string/menu_home" />
+            android:icon="@drawable/icon_fastfood"
+            android:title="home" />
 
         <item
             android:id="@+id/nav_match_scouting_start"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@drawable/icon_heart"
             android:title="match scouting" />
 
         <item
             android:id="@+id/nav_pit_scouting"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@drawable/icon_heart_outline"
             android:title="pit scouting" />
 
     </group>
