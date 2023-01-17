@@ -3,6 +3,7 @@ package com.example.lapislazuli.Fragments;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
@@ -10,48 +11,66 @@ import android.widget.Toast;
 import android.widget.Button;
 import android.content.Intent;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
 
 import com.example.lapislazuli.MainActivity;
 import com.example.lapislazuli.R;
+import com.example.lapislazuli.databinding.FragmentMatchScoutingStartBinding;
 
-import com.example.lapislazuli.databinding.MatchScoutingStartBinding;
-public class MatchScoutingStartFragment extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
-    public Button button;
+public class MatchScoutingStartFragment extends Fragment {
 
-    private MatchScoutingStartBinding binding;
+    private Spinner robotSpinner;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState){
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_match_scouting_start);
+    private FragmentMatchScoutingStartBinding binding;
 
-        Spinner roboNum = findViewById(R.id.robot_spinner);
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.robotNumber, android.R.layout.simple_spinner_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        roboNum.setAdapter(adapter);
-        roboNum.setOnItemSelectedListener(this);
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
 
-        button = (Button) findViewById(R.id.bt_startScout);
+        binding = FragmentMatchScoutingStartBinding.inflate(inflater, container, false);
+        View root = binding.getRoot();
+        setUpSpinner();
 
-        button.setOnClickListener(new View.OnClickListener() {
+        Button scout = root.findViewById(R.id.bt_startScout);
+
+        scout.setOnClickListener(new View.OnClickListener(){
+
             @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MatchScoutingStartFragment.this, MatchScoutingFragment.class);
-                startActivity(intent);
+            public void onClick(View view) {
+                NavController navController = Navigation.findNavController(getActivity(),R.id.nav_host_fragment_content_main);
+                navController.navigate(R.id.nav_match_scouting);
+            }
+        });
+
+        return root;
+    }
+
+    public void setUpSpinner(){
+        View root = binding.getRoot();
+
+        robotSpinner = root.findViewById(R.id.robot_spinner);
+
+        ArrayAdapter<CharSequence> robotAdapter = ArrayAdapter.createFromResource(root.getContext(),R.array.robotNumber,android.R.layout.simple_spinner_item);
+        robotAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        robotSpinner.setAdapter(robotAdapter);
+
+        robotSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener(){
+
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                String choice = parent.getItemAtPosition(position).toString();
+                Toast.makeText(binding.getRoot().getContext(), choice,Toast.LENGTH_LONG).show();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
             }
         });
     }
 
-    @Override
-    public void onItemSelected(AdapterView<?> parent, View view, int position, long l) {
-        String text = parent.getItemAtPosition(position).toString();
-        Toast.makeText(parent.getContext(), text, Toast.LENGTH_SHORT).show();
-    }
 
-    @Override
-    public void onNothingSelected(AdapterView<?> adapterView) {
-
-    }
 }
