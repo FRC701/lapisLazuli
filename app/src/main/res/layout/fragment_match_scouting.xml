@@ -38,27 +38,22 @@
 
                 <RadioGroup
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal">
+                    <RadioButton
+                        android:id="@+id/rb_yesMobility"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:ems="15"
+                        android:text="yes" />
 
-                        <RadioButton
-                            android:id="@+id/rb_yesMobility"
-                            android:layout_width="wrap_content"
-                            android:layout_height="50dp"
-                            android:ems="11"
-                            android:text="yes" />
-
-                        <RadioButton
-                            android:id="@+id/rb_noMobility"
-                            android:layout_width="wrap_content"
-                            android:layout_height="50dp"
-                            android:ems="11"
-                            android:text="no" />
-                    </LinearLayout>
+                    <RadioButton
+                        android:id="@+id/rb_noMobility"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:ems="15"
+                        android:text="no" />
 
                 </RadioGroup>
 
@@ -211,68 +206,39 @@
 
                 <RadioGroup
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
 
                         <RadioButton
                             android:id="@+id/rb_engagedMAuto"
                             android:layout_width="wrap_content"
                             android:layout_height="50dp"
-                            android:ems="11"
-
+                            android:ems="9"
                             android:text="Engaged" />
 
                         <RadioButton
                             android:id="@+id/rb_dockedMAuto"
                             android:layout_width="wrap_content"
                             android:layout_height="50dp"
-                            android:ems="11"
+                            android:ems="9"
                             android:text="Docked(not engaged)" />
-                    </LinearLayout>
-
-                </RadioGroup>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <View
-                    android:id="@+id/view9"
-                    android:layout_width="380dp"
-                    android:layout_height="10dp" />
-
-                <RadioGroup
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal">
 
                         <RadioButton
                             android:id="@+id/bt_attempMAuto"
                             android:layout_width="wrap_content"
                             android:layout_height="50dp"
-                            android:ems="11"
+                            android:ems="9"
                             android:text="Attempted but failed" />
 
                         <RadioButton
                             android:id="@+id/notAttempMAuto"
                             android:layout_width="wrap_content"
                             android:layout_height="50dp"
-                            android:ems="11"
+                            android:ems="9"
                             android:text="Not Attempted" />
-                    </LinearLayout>
 
                 </RadioGroup>
+
             </LinearLayout>
 
             <TextView
@@ -423,67 +389,40 @@
 
                 <RadioGroup
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" >
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal">
+                    <RadioButton
+                        android:id="@+id/rb_groundIntakeMTele"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:ems="9"
+                        android:text="Ground" />
 
-                        <RadioButton
-                            android:id="@+id/rb_groundIntakeMTele"
-                            android:layout_width="wrap_content"
-                            android:layout_height="50dp"
-                            android:ems="11"
-                            android:text="Ground" />
+                    <RadioButton
+                        android:id="@+id/rb_substationIntakeMTele"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:ems="9"
+                        android:text="Substation" />
 
-                        <RadioButton
-                            android:id="@+id/rb_substationIntakeMTele"
-                            android:layout_width="wrap_content"
-                            android:layout_height="50dp"
-                            android:ems="11"
-                            android:text="Substation" />
-                    </LinearLayout>
+                    <RadioButton
+                        android:id="@+id/rb_bothIntakeMTele"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:ems="9"
+                        android:text="Both" />
 
-                </RadioGroup>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <View
-                    android:id="@+id/view13"
-                    android:layout_width="380dp"
-                    android:layout_height="10dp" />
-
-                <RadioGroup
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal">
-
-                        <RadioButton
-                            android:id="@+id/rb_bothIntakeMTele"
-                            android:layout_width="wrap_content"
-                            android:layout_height="50dp"
-                            android:ems="11"
-                            android:text="Both" />
-
-                        <RadioButton
-                            android:id="@+id/rb_neitherIntakeMTele"
-                            android:layout_width="wrap_content"
-                            android:layout_height="50dp"
-                            android:ems="11"
-                            android:text="Neither" />
-                    </LinearLayout>
+                    <RadioButton
+                        android:id="@+id/rb_neitherIntakeMTele"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:ems="9"
+                        android:text="Neither" />
 
                 </RadioGroup>
             </LinearLayout>
+
 
             <TextView
                 android:id="@+id/tv_endgameLabel"
@@ -509,68 +448,41 @@
 
                 <RadioGroup
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
 
-                    <LinearLayout
+                    <RadioButton
+                        android:id="@+id/rb_engagedMTele"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                        android:layout_height="50dp"
+                        android:ems="9"
 
-                        <RadioButton
-                            android:id="@+id/rb_engagedMTele"
-                            android:layout_width="wrap_content"
-                            android:layout_height="50dp"
-                            android:ems="11"
+                        android:text="Engaged" />
 
-                            android:text="Engaged" />
+                    <RadioButton
+                        android:id="@+id/rb_dockedMTele"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:ems="9"
+                        android:text="Docked(not engaged)" />
 
-                        <RadioButton
-                            android:id="@+id/rb_dockedMTele"
-                            android:layout_width="wrap_content"
-                            android:layout_height="50dp"
-                            android:ems="11"
-                            android:text="Docked(not engaged)" />
-                    </LinearLayout>
+                    <RadioButton
+                        android:id="@+id/bt_attempMTele"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:ems="9"
+                        android:text="Attempted but failed" />
 
-                </RadioGroup>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <View
-                    android:id="@+id/view15"
-                    android:layout_width="380dp"
-                    android:layout_height="10dp" />
-
-                <RadioGroup
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal">
-
-                        <RadioButton
-                            android:id="@+id/bt_attempMTele"
-                            android:layout_width="wrap_content"
-                            android:layout_height="50dp"
-                            android:ems="11"
-                            android:text="Attempted but failed" />
-
-                        <RadioButton
-                            android:id="@+id/notAttempMTele"
-                            android:layout_width="wrap_content"
-                            android:layout_height="50dp"
-                            android:ems="11"
-                            android:text="Not Attempted" />
-                    </LinearLayout>
+                    <RadioButton
+                        android:id="@+id/notAttempMTele"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:ems="9"
+                        android:text="Not Attempted" />
 
                 </RadioGroup>
             </LinearLayout>
+
 
             <View
                 android:id="@+id/view16"
