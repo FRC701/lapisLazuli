@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -12,15 +11,15 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/tv_matchAutoLabel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Match Auto"
-                android:textSize="45sp"
-                android:textAlignment="center"/>
+                android:textAlignment="center"
+                android:textSize="45sp" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -75,9 +74,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:ems="13"
-                    android:textSize="25sp"
+                    android:text="Upper Row Placement"
                     android:textAlignment="center"
-                    android:text="Upper Row Placement" />
+                    android:textSize="25sp" />
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/til_numOnUpperMAuto"
@@ -107,9 +106,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:ems="13"
-                    android:textSize="25sp"
+                    android:text="Mid Row Placement"
                     android:textAlignment="center"
-                    android:text="Mid Row Placement"/>
+                    android:textSize="25sp" />
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/til_numOnMidMAuto"
@@ -137,10 +136,10 @@
                     android:id="@+id/tv_bottomRowMAuto"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textAlignment="center"
-                    android:textSize="25sp"
                     android:ems="13"
-                    android:text="Bottom Row Placement"/>
+                    android:text="Bottom Row Placement"
+                    android:textAlignment="center"
+                    android:textSize="25sp" />
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/til_numOnBottomRowMAuto"
@@ -168,10 +167,10 @@
                     android:id="@+id/tv_linksMAuto"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="25sp"
                     android:ems="13"
+                    android:text="Number of Links"
                     android:textAlignment="center"
-                    android:text="Number of Links"/>
+                    android:textSize="25sp" />
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/til_numOfLinksMAutos"
@@ -199,43 +198,43 @@
                     android:id="@+id/tv_statsMAuto"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textAlignment="center"
                     android:ems="13"
-                    android:textSize="25sp"
-                    android:text="Docked"/>
+                    android:text="Docked"
+                    android:textAlignment="center"
+                    android:textSize="25sp" />
 
                 <RadioGroup
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
-                        <RadioButton
-                            android:id="@+id/rb_engagedMAuto"
-                            android:layout_width="wrap_content"
-                            android:layout_height="50dp"
-                            android:ems="9"
-                            android:text="Engaged" />
+                    <RadioButton
+                        android:id="@+id/rb_engagedMAuto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:ems="9"
+                        android:text="Engaged" />
 
-                        <RadioButton
-                            android:id="@+id/rb_dockedMAuto"
-                            android:layout_width="wrap_content"
-                            android:layout_height="50dp"
-                            android:ems="9"
-                            android:text="Docked(not engaged)" />
+                    <RadioButton
+                        android:id="@+id/rb_dockedMAuto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:ems="9"
+                        android:text="Docked(not engaged)" />
 
-                        <RadioButton
-                            android:id="@+id/bt_attempMAuto"
-                            android:layout_width="wrap_content"
-                            android:layout_height="50dp"
-                            android:ems="9"
-                            android:text="Attempted but failed" />
+                    <RadioButton
+                        android:id="@+id/bt_attempMAuto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:ems="9"
+                        android:text="Attempted but failed" />
 
-                        <RadioButton
-                            android:id="@+id/notAttempMAuto"
-                            android:layout_width="wrap_content"
-                            android:layout_height="50dp"
-                            android:ems="9"
-                            android:text="Not Attempted" />
+                    <RadioButton
+                        android:id="@+id/notAttempMAuto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:ems="9"
+                        android:text="Not Attempted" />
 
                 </RadioGroup>
 
@@ -246,8 +245,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Match Tele"
-                android:textSize="45sp"
-                android:textAlignment="center"/>
+                android:textAlignment="center"
+                android:textSize="45sp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -290,9 +289,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:ems="13"
+                    android:text="Mid Row Placement"
                     android:textAlignment="center"
-                    android:textSize="25sp"
-                    android:text="Mid Row Placement" />
+                    android:textSize="25sp" />
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/til_numOnMidMTele"
@@ -321,9 +320,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:ems="13"
+                    android:text="Bottom Row Placement"
                     android:textAlignment="center"
-                    android:textSize="25sp"
-                    android:text="Bottom Row Placement" />
+                    android:textSize="25sp" />
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/til_numOnBottomRowMTele"
@@ -352,9 +351,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:ems="13"
+                    android:text="Number of Links"
                     android:textAlignment="center"
-                    android:textSize="25sp"
-                    android:text="Number of Links" />
+                    android:textSize="25sp" />
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/til_numofLinksMTele"
@@ -383,9 +382,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:ems="13"
-                    android:textSize="25sp"
+                    android:text="Cone/Cube Intake"
                     android:textAlignment="center"
-                    android:text="Cone/Cube Intake" />
+                    android:textSize="25sp" />
 
                 <RadioGroup
                     android:layout_width="match_parent"
@@ -428,9 +427,9 @@
                 android:id="@+id/tv_endgameLabel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:text="End Game"
                 android:textAlignment="center"
-                android:textSize="45sp"
-                android:text="End Game" />
+                android:textSize="45sp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -442,9 +441,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:ems="13"
-                    android:textSize="25sp"
+                    android:text="Docked"
                     android:textAlignment="center"
-                    android:text="Docked" />
+                    android:textSize="25sp" />
 
                 <RadioGroup
                     android:layout_width="wrap_content"
