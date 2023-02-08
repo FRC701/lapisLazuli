@@ -25,6 +25,25 @@
                 android:textAlignment="center"
                 android:textSize="24sp" />
 
+
+            <TextView
+                android:id="@+id/tv_pitScoutingTeamNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="what team are you scouting?"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="ex: 701" />
+            </com.google.android.material.textfield.TextInputLayout>
+
             <TextView
                 android:id="@+id/tv_pitScouterName"
                 android:layout_width="match_parent"
@@ -42,20 +61,7 @@
                     android:layout_height="wrap_content"
                     android:hint="ex: bill, bob, sharol" />
             </com.google.android.material.textfield.TextInputLayout>
-
-            <TextView
-                android:id="@+id/tv_pitScoutingTeamNumber"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="what team are you scouting?"
-                android:textAlignment="center"
-                android:textSize="20sp" />
-
-            <Spinner
-                android:id="@+id/pitSpinner"
-                android:layout_width="match_parent"
-                android:layout_height="48dp" />
-
+            
             <TextView
                 android:id="@+id/tv_pitRobotHeader"
                 android:layout_width="match_parent"
@@ -150,24 +156,18 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" >
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
+                <RadioButton
+                    android:id="@+id/bt_closedChassis"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:text="closed chassis" />
 
-                    <RadioButton
-                        android:id="@+id/bt_closedChassis"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="closed chassis"
-                        android:ems="10"/>
-
-                    <RadioButton
-                        android:id="@+id/bt_openChassis"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="open chassis" />
-                </LinearLayout>
+                <RadioButton
+                    android:id="@+id/bt_openChassis"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="open chassis" />
 
             </RadioGroup>
 
@@ -185,26 +185,20 @@
 
             <RadioGroup
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+                android:layout_height="match_parent">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
+                <RadioButton
+                    android:id="@+id/bt_pitYesShiftingGearbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:text="yes" />
 
-                    <RadioButton
-                        android:id="@+id/bt_pitYesShiftingGearbox"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="yes"
-                        android:ems="10"/>
-
-                    <RadioButton
-                        android:id="@+id/bt_pitNoShiftingGearbox"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="no" />
-                </LinearLayout>
+                <RadioButton
+                    android:id="@+id/bt_pitNoShiftingGearbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="no" />
 
             </RadioGroup>
 
@@ -397,24 +391,18 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" >
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
+                <RadioButton
+                    android:id="@+id/bt_pitYesAuto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:text="yes" />
 
-                    <RadioButton
-                        android:id="@+id/bt_pitYesAuto"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="yes"
-                        android:ems="10"/>
-
-                    <RadioButton
-                        android:id="@+id/bt_pitNoAuto"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="no" />
-                </LinearLayout>
+                <RadioButton
+                    android:id="@+id/bt_pitNoAuto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="no" />
 
             </RadioGroup>
 
@@ -476,31 +464,25 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" >
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
+                <RadioButton
+                    android:id="@+id/bt_pitAutoPreloadCone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="5"
+                    android:text="cone" />
 
-                    <RadioButton
-                        android:id="@+id/bt_pitAutoPreloadCone"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="cone"
-                        android:ems="5"/>
+                <RadioButton
+                    android:id="@+id/bt_pitAutoPreloadCube"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="5"
+                    android:text="cube" />
 
-                    <RadioButton
-                        android:id="@+id/bt_pitAutoPreloadCube"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="cube"
-                        android:ems="5"/>
-
-                    <RadioButton
-                        android:id="@+id/bt_pitAutoPreloadNo"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="none" />
-                </LinearLayout>
+                <RadioButton
+                    android:id="@+id/bt_pitAutoPreloadNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="none" />
 
             </RadioGroup>
 
@@ -643,24 +625,18 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" >
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
+                <RadioButton
+                    android:id="@+id/bt_pitEndGamePlatformYes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:text="yes" />
 
-                    <RadioButton
-                        android:id="@+id/bt_pitEndGamePlatformYes"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="yes"
-                        android:ems="10"/>
-
-                    <RadioButton
-                        android:id="@+id/bt_pitEndGamePlatformNo"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="no" />
-                </LinearLayout>
+                <RadioButton
+                    android:id="@+id/bt_pitEndGamePlatformNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="no" />
 
             </RadioGroup>
 
