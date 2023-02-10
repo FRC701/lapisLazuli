@@ -14,12 +14,121 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/tv_matchAutoLabel"
+                android:id="@+id/tv_preMatch"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Match Auto"
+                android:textSize="50sp"
                 android:textAlignment="center"
-                android:textSize="45sp" />
+                android:text="Pre-Match" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_teamNum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="13"
+                    android:textSize="25sp"
+                    android:textAlignment="center"
+                    android:text="Team #"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="350dp"
+                        android:layout_height="wrap_content"
+                        android:hint="#" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_matchNum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="13"
+                    android:textSize="25sp"
+                    android:textAlignment="center"
+                    android:text="Match #"
+                     />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="350dp"
+                        android:layout_height="wrap_content"
+                        android:hint="#" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_robotNum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="13"
+                    android:textSize="25sp"
+                    android:textAlignment="center"
+                    android:text="Robot" />
+
+                <Spinner
+                    android:id="@+id/robotSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_scoutInitial"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="13"
+                    android:textSize="25sp"
+                    android:textAlignment="center"
+                    android:text="Scouter Initials" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="350dp"
+                        android:layout_height="wrap_content"
+                        android:hint="Initials" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="100dp" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="50sp"
+                android:textAlignment="center"
+                android:text="Match Auto" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
