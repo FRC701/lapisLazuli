@@ -54,14 +54,15 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:id="@+id/til_teamNumberPitScouting">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="ex: bill, bob, sharol" />
+                    android:hint="ex: 115lbs, 120lbs, 125lbs" />
             </com.google.android.material.textfield.TextInputLayout>
-            
+
             <TextView
                 android:id="@+id/tv_pitRobotHeader"
                 android:layout_width="match_parent"

@@ -16,6 +16,7 @@ import androidx.navigation.Navigation;
 import com.example.lapislazuli.R;
 import com.example.lapislazuli.databinding.FragmentMatchScoutingBinding;
 
+
 public class MatchScoutingFragment extends Fragment {
 
     private FragmentMatchScoutingBinding binding;
