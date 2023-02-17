@@ -12,4 +12,19 @@ public class PitSavingClass {
 
     private String pitAutoDock;
 
+    public void setpitAutoMobility(String one) {
+
+    }
+
+    public void setpitAutoPickUpCone(String two) {
+
+    }
+
+    public void setpitAutoPickUpCube(String three) {
+
+    }
+
+    public void setpitAutoDock(String four) {
+
+    }
 }
