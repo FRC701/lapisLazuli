@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "386555327126",
+    "project_id": "lapislazuli-f63d7",
+    "storage_bucket": "lapislazuli-f63d7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:386555327126:android:1bd01cf72214193ada88b7",
+        "android_client_info": {
+          "package_name": "com.example.lapislazuli"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "386555327126-vrnkdtjmu7prpf9i3uck09nm75qla2t0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAt70Ilv_JS4ph3eKuh9IqtEolqjfugcEY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "386555327126-vrnkdtjmu7prpf9i3uck09nm75qla2t0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
