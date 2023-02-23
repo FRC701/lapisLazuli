@@ -14,6 +14,7 @@ import androidx.navigation.Navigation;
 import android.widget.CheckBox;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.view.View;
 
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.database.DataSnapshot;
@@ -25,13 +26,14 @@ import com.google.firebase.database.ValueEventListener;
 import com.example.lapislazuli.R;
 import com.example.lapislazuli.databinding.FragmentPitScoutingBinding;
 
+
 public class PitScouting extends Fragment {
 
     Button submitPit;
 
     PitSavingClass PitSavingClass;
 
-    TextInputLayout teamNumberPitScouting, pitScouterName, pitRobotWeight, pitRobotDimensions, pitRobotSpeed, pitSettingShiftingGearbox, pitDriveTrainType, pitIntakeType, pitLiftingMechanismType, pitRobotProgrammingLanguage, pitAppProgrammingLanguage, pitCubeConeAmount, pitTeleopCycleTime, pitTeleopNodes, pitEndgamePlatformSuccess;
+    TextInputLayout pitTeamNumber, pitScouterName, pitRobotWeight, pitRobotDimensions, pitRobotSpeed, pitSettingShiftingGearbox, pitDriveTrainType, pitIntakeType, pitLiftingMechanismType, pitRobotProgrammingLanguage, pitAppProgrammingLanguage, pitCubeConeAmount, pitTeleopCycleTime, pitTeleopNodes, pitEndgamePlatformSuccess;
 
     RadioGroup pitOpenClosedChassis, pitShiftingGearbox, pitHaveAuto, pitAutoPreload, pitTeleopScoringPreference, pitEndgamePlatform;
 
@@ -54,6 +56,300 @@ public class PitScouting extends Fragment {
 
         Button submit = root.findViewById(R.id.bt_submitPit);
 
+        pitTeamNumber = root.findViewById(R.id.til_pitTeamNumber);
+
+        pitScouterName = root.findViewById(R.id.til_pitScouterName);
+
+        pitRobotWeight = findViewById(R.id.til_pitRobotWeight);
+
+        pitRobotDimensions = findViewById(R.id.til_pitRobotDimensions);
+
+        pitRobotSpeed = findViewById(R.id.til_pitRobotSpeed);
+
+        pitSettingShiftingGearbox = findViewById(R.id.til_pitSettingShiftingGearbox);
+
+        pitDriveTrainType = findViewById(R.id.til_pitDriveTrainType);
+
+        pitIntakeType = findViewById(R.id.til_pitIntakeType);
+
+        pitLiftingMechanismType = findViewById(R.id.til_pitLiftingMechanismType);
+
+        pitRobotProgrammingLanguage = findViewById(R.id.til_pitRobotProgrammingLanguage);
+
+        pitAppProgrammingLanguage = findViewById(R.id.til_pitAppProgrammingLanguage);
+
+        pitCubeConeAmount = findViewById(R.id.til_pitCubeConeAmount);
+
+        pitTeleopCycleTime = findViewById(R.id.til_pitTeleopCycleTime);
+
+        pitTeleopNodes = findViewById(R.id.til_pitTeleopNodes);
+
+        pitEndgamePlatformSuccess = findViewById(R.id.til_pitEndgamePlatformSuccess);
+
+        //radio groups
+
+        pitOpenClosedChassis = findViewById(R.id.rg_pitOpenClosedChassis);
+
+        pitShiftingGearbox = findViewById(R.id.rg_pitShiftingGearbox);
+
+        pitHaveAuto = findViewById(R.id.rg_pitHaveAuto);
+
+        pitAutoPreload = findViewById(R.id.rg_pitAutoPreload);
+
+        pitTeleopScoringPreference = findViewById(R.id.rg_pitTeleopScoringPreference);
+
+        pitEndgamePlatform = findViewById(R.id.rg_pitEndgamePlatform);
+
+
+
+
+        //radio buttons
+
+        pitClosedChassis = findViewById(R.id.rb_pitClosedChassis);
+
+        pitOpenChassis = findViewById(R.id.rb_pitOpenChassis);
+
+        pitYesShiftingGearbox = findViewById(R.id.rb_pitYesShiftingGearbox);
+
+        pitNoShiftingGearbox = findViewById(R.id.rb_pitNoShiftingGearbox);
+
+        pitYesAuto = findViewById(R.id.rb_pitYesAuto);
+
+        pitNoAuto = findViewById(R.id.rb_pitNoAuto);
+
+        pitAutoPreloadCone = findViewById(R.id.rb_pitAutoPreloadCone);
+
+        pitAutoPreloadCube = findViewById(R.id.rb_pitAutoPreloadCube);
+
+        pitAutoPreloadNo = findViewById(R.id.rb_pitAutoPreloadNo);
+
+        pitTeleopScoringPreferenceCone = findViewById(R.id.rb_pitTeleopScoringPreferenceCone);
+
+        pitTeleopScoringPreferenceCube = findViewById(R.id.rb_pitTeleopScoringPreferenceCube);
+
+        pitTeleopScoringPreferenceNoPreference = findViewById(R.id.rb_pitTeleopScoringPreferenceNoPreference);
+
+        pitTeleopScoringPreferenceNeither = findViewById(R.id.rb_pitTeleopScoringPreferenceNeither);
+
+        pitTeleopScoringPreferenceDefense = findViewById(R.id.rb_pitTeleopScoringPreferenceDefense);
+
+        pitEndGamePlatformYes = findViewById(R.id.rb_pitEndGamePlatformYes);
+
+        pitEndGamePlatformNo = findViewById(R.id.rb_pitEndGamePlatformNo);
+
+
+        //checkboxes
+        pitAutoMobility = findViewById(R.id.cb_pitAutoMobility);
+
+        pitAutoPickUpCone = findViewById(R.id.cb_pitAutoPickUpCone);
+
+        pitAutoPickUpCube = findViewById(R.id.cb_pitAutoPickUpCube);
+
+        pitAutoDock = findViewById(R.id.cb_pitAutoDock);
+
+        //end button
+        submitPit = findViewById(R.id.bt_submitPit);
+
+
+        //checkboxes
+        String one = "Auto Mobility";
+        String two = "Auto Pick Up Cone";
+        String three = "Auto Pick Up Cube";
+        String four = "Auto Dock";
+
+        //beginning of database work, scroll down till end
+
+        reference = rootNode.getInstance().getReference().child("pit scouting");
+
+        reference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+                if (snapshot.exists()) {
+                    i = (int) snapshot.getChildrenCount();
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+        submitPit.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                //radio buttons work
+
+                String closedChassis = pitClosedChassis.getText().toString();
+                String openChassis = pitOpenChassis.getText().toString();
+
+                String yShifting = pitYesShiftingGearbox.getText().toString();
+                String nShifting = pitNoShiftingGearbox.getText().toString();
+
+                String yAuto = pitYesAuto.getText().toString();
+                String nAuto = pitNoAuto.getText().toString();
+
+                String conePreload = pitAutoPreloadCone.getText().toString();
+                String cubePreload = pitAutoPreloadCube.getText().toString();
+                String noPreload = pitAutoPreloadNo.getText().toString();
+
+                String TconePreference = pitTeleopScoringPreferenceCone.getText().toString();
+                String TcubePreference = pitTeleopScoringPreferenceCube.getText().toString();
+                String TnoPreference = pitTeleopScoringPreferenceNoPreference.getText().toString();
+                String TneitherPreference = pitTeleopScoringPreferenceNeither.getText().toString();
+                String TdefensePreference = pitTeleopScoringPreferenceDefense.getText().toString();
+
+                String pitPlatformY = pitEndGamePlatformYes.getText().toString();
+                String pitPlatformN = pitEndGamePlatformNo.getText().toString();
+
+
+                //text input layouts !!
+                PitSavingClass.setPitTeamNumber(pitTeamNumber.getEditText().getText().toString());
+                reference.child(String.valueOf(i+1)).setValue(PitSavingClass);
+
+                PitSavingClass.setPitScouterName(pitScouterName.getEditText().getText().toString());
+                reference.child(String.valueOf(i+1)).setValue(PitSavingClass);
+
+                PitSavingClass.setPitRobotWeight(pitRobotWeight.getEditText().getText().toString());
+                reference.child(String.valueOf(i+1)).setValue(PitSavingClass);
+
+                PitSavingClass.setPitRobotDimensions(pitRobotDimensions.getEditText().getText().toString());
+                reference.child(String.valueOf(i+1)).setValue(PitSavingClass);
+
+                PitSavingClass.setPitRobotSpeed(pitRobotSpeed.getEditText().getText().toString());
+                reference.child(String.valueOf(i+1)).setValue(PitSavingClass);
+
+                PitSavingClass.setPitSettingsShiftingGearbox(pitSettingShiftingGearbox.getEditText().getText().toString());
+                reference.child(String.valueOf(i+1)).setValue(PitSavingClass);
+
+                PitSavingClass.setPitDriveTrainType(pitDriveTrainType.getEditText().getText().toString());
+                reference.child(String.valueOf(i+1)).setValue(PitSavingClass);
+
+                PitSavingClass.setPitIntakeType(pitIntakeType.getEditText().getText().toString());
+                reference.child(String.valueOf(i+1)).setValue(PitSavingClass);
+
+                PitSavingClass.setPitLiftingMechanismType(pitLiftingMechanismType.getEditText().getText().toString());
+                reference.child(String.valueOf(i+1)).setValue(PitSavingClass);
+
+                PitSavingClass.setPitRobotProgrammingLanguage(pitRobotProgrammingLanguage.getEditText().getText().toString());
+                reference.child(String.valueOf(i+1)).setValue(PitSavingClass);
+
+                PitSavingClass.setPitAppProgrammingLanguage(pitAppProgrammingLanguage.getEditText().getText().toString());
+                reference.child(String.valueOf(i+1)).setValue(PitSavingClass);
+
+                PitSavingClass.setPitCubeConeAmount(pitCubeConeAmount.getEditText().getText().toString());
+                reference.child(String.valueOf(i+1)).setValue(PitSavingClass);
+
+                PitSavingClass.setPitTeleopCycleTime(pitTeleopCycleTime.getEditText().getText().toString());
+                reference.child(String.valueOf(i+1)).setValue(PitSavingClass);
+
+                PitSavingClass.setPitTeleopNodes(pitTeleopNodes.getEditText().getText().toString());
+                reference.child(String.valueOf(i+1)).setValue(PitSavingClass);
+
+                PitSavingClass.setPitEndgamePlatformSuccess(pitEndgamePlatformSuccess.getEditText().getText().toString());
+                reference.child(String.valueOf(i+1)).setValue(PitSavingClass);
+
+
+
+                //radio buttons
+                if(pitClosedChassis.isChecked()){
+                    PitSavingClass.setPitOpenClosedChassisQues(closedChassis);
+                    reference.child(String.valueOf(i+1)).setValue(PitSavingClass);
+                } else{
+                    PitSavingClass.setPitOpenClosedChassisQues(openChassis);
+                    reference.child(String.valueOf(i+1)).setValue(PitSavingClass);
+                }
+
+
+                if(pitYesShiftingGearbox.isChecked()){
+                    PitSavingClass.setPitShiftingGearboxQues(yShifting);
+                    reference.child(String.valueOf(i+1)).setValue(PitSavingClass);
+                } else{
+                    PitSavingClass.setPitShiftingGearboxQues(nShifting);
+                    reference.child(String.valueOf(i+1)).setValue(PitSavingClass);
+                }
+
+
+                if(pitYesAuto.isChecked()){
+                    PitSavingClass.setPitHaveAnAutoQues(yAuto);
+                    reference.child(String.valueOf(i+1)).setValue(PitSavingClass);
+                } else{
+                    PitSavingClass.setPitHaveAnAutoQues(nAuto);
+                    reference.child(String.valueOf(i+1)).setValue(PitSavingClass);
+                }
+
+
+                if(pitAutoPreloadCone.isChecked()){
+                    PitSavingClass.setPitAutoPreloadQues(conePreload);
+                    reference.child(String.valueOf(i+1)).setValue(PitSavingClass);
+                } else if(pitAutoPreloadCube.isChecked()){
+                    PitSavingClass.setPitAutoPreloadQues(cubePreload);
+                    reference.child(String.valueOf(i+1)).setValue(PitSavingClass);
+                } else{
+                    PitSavingClass.setPitAutoPreloadQues(noPreload);
+                    reference.child(String.valueOf(i+1)).setValue(PitSavingClass);
+                }
+
+
+                if(pitTeleopScoringPreferenceCone.isChecked()){
+                    PitSavingClass.setPitTeleopScoringPreferenceQues(TconePreference);
+                    reference.child(String.valueOf(i+1)).setValue(PitSavingClass);
+                } else if(pitTeleopScoringPreferenceCube.isChecked()){
+                    PitSavingClass.setPitTeleopScoringPreferenceQues(TcubePreference);
+                    reference.child(String.valueOf(i+1)).setValue(PitSavingClass);
+                } else if(pitTeleopScoringPreferenceNoPreference.isChecked()){
+                    PitSavingClass.setPitTeleopScoringPreferenceQues(TnoPreference);
+                    reference.child(String.valueOf(i+1)).setValue(PitSavingClass);
+                } else if(pitTeleopScoringPreferenceNeither.isChecked()){
+                    PitSavingClass.setPitTeleopScoringPreferenceQues(TneitherPreference);
+                    reference.child(String.valueOf(i+1)).setValue(PitSavingClass);
+                } else{
+                    PitSavingClass.setPitTeleopScoringPreferenceQues(TdefensePreference);
+                    reference.child(String.valueOf(i+1)).setValue(PitSavingClass);
+                }
+
+
+                if(pitEndGamePlatformYes.isChecked()){
+                    PitSavingClass.setPitEndGamePlatformQues(pitPlatformY);
+                    reference.child(String.valueOf(i+1)).setValue(PitSavingClass);
+                } else{
+                    PitSavingClass.setPitEndGamePlatformQues(pitPlatformN);
+                    reference.child(String.valueOf(i+1)).setValue(PitSavingClass);
+                }
+
+
+
+                //checkboxes
+                if(pitAutoMobility.isChecked()){
+                    PitSavingClass.setPitAutoMobility(one);
+                    reference.child(String.valueOf(i+1)).setValue(PitSavingClass);
+                } else{
+
+                }
+                if(pitAutoPickUpCone.isChecked()){
+                    PitSavingClass.setPitAutoPickUpCone(two);
+                    reference.child(String.valueOf(i+1)).setValue(PitSavingClass);
+                } else{
+
+                }
+                if(pitAutoPickUpCube.isChecked()){
+                    PitSavingClass.setPitAutoPickUpCube(three);
+                    reference.child(String.valueOf(i+1)).setValue(PitSavingClass);
+                } else{
+
+                }
+                if(pitAutoDock.isChecked()){
+                    PitSavingClass.setPitAutoDock(four);
+                    reference.child(String.valueOf(i+1)).setValue(PitSavingClass);
+                } else{
+
+                }
+
+            }
+        });
         submit.setOnClickListener(new View.OnClickListener(){
 
             @Override
