@@ -6,55 +6,37 @@ public class PitSavingClass {
     //text input layouts
 
     String pitTeamNumber;
-
     String pitScouterName;
-
     String pitRobotWeight;
 
 
     String pitRobotDimensions;
-
     String pitRobotSpeed;
-
     String pitSettingsShiftingGearbox;
-
     String pitDriveTrainType;
-
     String pitIntakeType;
-
     String pitLiftingMechanismType;
-
     String pitRobotProgrammingLanguage;
-
     String pitAppProgrammingLanguage;
-
     String pitCubeConeAmount;
-
     String pitTeleopCycleTime;
-
     String pitTeleopNodes;
-
     String pitEndgamePlatformSuccess;
 
     //radiobuttons
 
     String pitOpenClosedChassisQues;
-
     String pitShiftingGearboxQues;
-
     String pitHaveAnAutoQues;
-
     String pitAutoPreloadQues;
-
     String pitTeleopScoringPreferenceQues;
-
     String pitEndGamePlatformQues;
 
-    //checkbox question
+    //checkbox
 
     String pitAutoActions;
 
-    //checkboxes
+    //checkbox options
 
     private String pitAutoMobility;
 
@@ -64,13 +46,11 @@ public class PitSavingClass {
 
     private String pitAutoDock;
 
-
-
-
     //checkbox
 
     public String getPitAutoActions(){return pitAutoActions;}
     public void setPitAutoActions(String pitAutoActions){this.pitAutoActions = pitAutoActions;}
+
 
 
 
@@ -111,6 +91,7 @@ public class PitSavingClass {
 
 
 //radio button
+
     public String getPitOpenClosedChassisQues(){return pitOpenClosedChassisQues;}
     public void setPitOpenClosedChassisQues(String pitOpenClosedChassisQues) {this.pitOpenClosedChassisQues = pitOpenClosedChassisQues;}
 
