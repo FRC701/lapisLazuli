@@ -25,13 +25,13 @@ import com.google.firebase.database.ValueEventListener;
 
 public class PitScouting extends Fragment {
 
+    private FragmentPitScoutingBinding binding;
+
     Button submitPit;
 
     PitSavingClass PitSavingClass;
 
     TextInputLayout pitTeamNumber, pitScouterName, pitRobotWeight, pitRobotDimensions, pitRobotSpeed, pitSettingShiftingGearbox, pitDriveTrainType, pitIntakeType, pitLiftingMechanismType, pitRobotProgrammingLanguage, pitAppProgrammingLanguage, pitCubeConeAmount, pitTeleopCycleTime, pitTeleopNodes, pitEndgamePlatformSuccess;
-
-    RadioGroup pitOpenClosedChassis, pitShiftingGearbox, pitHaveAuto, pitAutoPreload, pitTeleopScoringPreference, pitEndgamePlatform;
 
     RadioButton pitClosedChassis, pitOpenChassis, pitYesShiftingGearbox, pitNoShiftingGearbox, pitYesAuto, pitNoAuto, pitAutoPreloadCone, pitAutoPreloadCube, pitAutoPreloadNo, pitTeleopScoringPreferenceCone, pitTeleopScoringPreferenceCube, pitTeleopScoringPreferenceNoPreference, pitTeleopScoringPreferenceNeither, pitTeleopScoringPreferenceDefense, pitEndGamePlatformYes, pitEndGamePlatformNo;
 
@@ -43,25 +43,18 @@ public class PitScouting extends Fragment {
 
     DatabaseReference reference;
 
-    private FragmentPitScoutingBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+
         binding = FragmentPitScoutingBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        submitPit.setOnClickListener(new View.OnClickListener(){
+        PitSavingClass = new PitSavingClass();
 
 
-            @Override
-            public void onClick(View view) {
-                NavController navController = Navigation.findNavController(getActivity(),R.id.nav_host_fragment_content_main);
-                navController.navigate(R.id.nav_pit_scouting);
-
-                PitSavingClass = new PitSavingClass();
 
 
                 //text input layout
-                submitPit = root.findViewById(R.id.bt_submitPit);
 
                 pitTeamNumber = root.findViewById(R.id.til_pitTeamNumber);
 
@@ -93,71 +86,32 @@ public class PitScouting extends Fragment {
 
                 pitEndgamePlatformSuccess = root.findViewById(R.id.til_pitEndgamePlatformSuccess);
 
-                //radio groups
-
-                pitOpenClosedChassis = root.findViewById(R.id.rg_pitOpenClosedChassis);
-
-                pitShiftingGearbox = root.findViewById(R.id.rg_pitShiftingGearbox);
-
-                pitHaveAuto = root.findViewById(R.id.rg_pitHaveAuto);
-
-                pitAutoPreload = root.findViewById(R.id.rg_pitAutoPreload);
-
-                pitTeleopScoringPreference = root.findViewById(R.id.rg_pitTeleopScoringPreference);
-
-                pitEndgamePlatform = root.findViewById(R.id.rg_pitEndgamePlatform);
-
-
-
-
-
 
                 //radio buttons
 
                 pitClosedChassis = root.findViewById(R.id.rb_pitClosedChassis);
-
                 pitOpenChassis = root.findViewById(R.id.rb_pitOpenChassis);
 
                 pitYesShiftingGearbox = root.findViewById(R.id.rb_pitYesShiftingGearbox);
-
                 pitNoShiftingGearbox = root.findViewById(R.id.rb_pitNoShiftingGearbox);
 
                 pitYesAuto = root.findViewById(R.id.rb_pitYesAuto);
-
                 pitNoAuto = root.findViewById(R.id.rb_pitNoAuto);
 
                 pitAutoPreloadCone = root.findViewById(R.id.rb_pitAutoPreloadCone);
-
                 pitAutoPreloadCube = root.findViewById(R.id.rb_pitAutoPreloadCube);
-
                 pitAutoPreloadNo = root.findViewById(R.id.rb_pitAutoPreloadNo);
 
                 pitTeleopScoringPreferenceCone = root.findViewById(R.id.rb_pitTeleopScoringPreferenceCone);
-
                 pitTeleopScoringPreferenceCube = root.findViewById(R.id.rb_pitTeleopScoringPreferenceCube);
-
                 pitTeleopScoringPreferenceNoPreference = root.findViewById(R.id.rb_pitTeleopScoringPreferenceNoPreference);
-
                 pitTeleopScoringPreferenceNeither = root.findViewById(R.id.rb_pitTeleopScoringPreferenceNeither);
-
                 pitTeleopScoringPreferenceDefense = root.findViewById(R.id.rb_pitTeleopScoringPreferenceDefense);
 
                 pitEndGamePlatformYes = root.findViewById(R.id.rb_pitEndGamePlatformYes);
-
                 pitEndGamePlatformNo = root.findViewById(R.id.rb_pitEndGamePlatformNo);
 
-
-                //checkboxes
-                pitAutoMobility = root.findViewById(R.id.cb_pitAutoMobility);
-
-                pitAutoPickUpCone = root.findViewById(R.id.cb_pitAutoPickUpCone);
-
-                pitAutoPickUpCube = root.findViewById(R.id.cb_pitAutoPickUpCube);
-
-                pitAutoDock = root.findViewById(R.id.cb_pitAutoDock);
-
-                //end button
-                submitPit = root.findViewById(R.id.bt_submitPit);
+                reference = rootNode.getInstance().getReference().child("pit scouting");
 
 
                 //checkboxes
@@ -167,10 +121,6 @@ public class PitScouting extends Fragment {
                 String four = "Auto Dock";
 
 
-
-                //beginning of database work, scroll down till end
-
-                reference = rootNode.getInstance().getReference().child("pit scouting");
 
                 reference.addValueEventListener(new ValueEventListener() {
                     @Override
@@ -187,14 +137,15 @@ public class PitScouting extends Fragment {
                     }
                 });
 
+                Button submitPit = root.findViewById(R.id.bt_submitPit);
+
                 submitPit.setOnClickListener(new View.OnClickListener() {
 
                     @Override
                     public void onClick(View view) {
-                        rootNode = FirebaseDatabase.getInstance();
-                        reference = rootNode.getReference("pit scouting");
+                        NavController navController = Navigation.findNavController(getActivity(),R.id.nav_host_fragment_content_main);
+                        navController.navigate(R.id.nav_pit_scouting);
 
-                        reference.setValue("pit scouting");
 
                         //radio buttons work
 
@@ -369,17 +320,7 @@ public class PitScouting extends Fragment {
 
                 });
 
-
-                //end of database work
-            }
-        });
-
         return root;
-    }
+        }
 
-    @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-        binding = null;
-    }
 }

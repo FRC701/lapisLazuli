@@ -8,8 +8,6 @@ public class PitSavingClass {
     String pitTeamNumber;
     String pitScouterName;
     String pitRobotWeight;
-
-
     String pitRobotDimensions;
     String pitRobotSpeed;
     String pitSettingsShiftingGearbox;
