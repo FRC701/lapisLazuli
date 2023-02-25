@@ -33,10 +33,10 @@ public class PitScouting extends Fragment {
 
     RadioGroup pitOpenClosedChassis, pitShiftingGearbox, pitHaveAuto, pitAutoPreload, pitTeleopScoringPreference, pitEndgamePlatform;
 
-
     RadioButton pitClosedChassis, pitOpenChassis, pitYesShiftingGearbox, pitNoShiftingGearbox, pitYesAuto, pitNoAuto, pitAutoPreloadCone, pitAutoPreloadCube, pitAutoPreloadNo, pitTeleopScoringPreferenceCone, pitTeleopScoringPreferenceCube, pitTeleopScoringPreferenceNoPreference, pitTeleopScoringPreferenceNeither, pitTeleopScoringPreferenceDefense, pitEndGamePlatformYes, pitEndGamePlatformNo;
 
     CheckBox pitAutoMobility, pitAutoPickUpCone, pitAutoPickUpCube, pitAutoDock;
+
     int i = 0;
 
     FirebaseDatabase rootNode;
@@ -195,6 +195,7 @@ public class PitScouting extends Fragment {
                         reference = rootNode.getReference("pit scouting");
 
                         reference.setValue("pit scouting");
+
                         //radio buttons work
 
                         String closedChassis = pitClosedChassis.getText().toString();
