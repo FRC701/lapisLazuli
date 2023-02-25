@@ -36,6 +36,7 @@
                     android:text="Team #"/>
 
                 <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_numTeam"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
 
@@ -62,6 +63,7 @@
                      />
 
                 <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_numMatch"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
 
@@ -86,10 +88,18 @@
                     android:textAlignment="center"
                     android:text="Robot" />
 
-                <Spinner
-                    android:id="@+id/robotSpinner"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_numRobot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="350dp"
+                        android:layout_height="wrap_content"
+                        android:hint="Red 1" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
             </LinearLayout>
 
             <LinearLayout
@@ -107,6 +117,7 @@
                     android:text="Scouter Initials" />
 
                 <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_initials"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
 
@@ -332,14 +343,14 @@
                         android:text="Docked(not engaged)" />
 
                     <RadioButton
-                        android:id="@+id/bt_attempMAuto"
+                        android:id="@+id/rb_attempMAuto"
                         android:layout_width="wrap_content"
                         android:layout_height="50dp"
                         android:ems="9"
                         android:text="Attempted but failed" />
 
                     <RadioButton
-                        android:id="@+id/notAttempMAuto"
+                        android:id="@+id/rb_notAttempMAuto"
                         android:layout_width="wrap_content"
                         android:layout_height="50dp"
                         android:ems="9"
@@ -575,14 +586,14 @@
                         android:text="Docked(not engaged)" />
 
                     <RadioButton
-                        android:id="@+id/bt_attempMTele"
+                        android:id="@+id/rb_attempMTele"
                         android:layout_width="wrap_content"
                         android:layout_height="50dp"
                         android:ems="9"
                         android:text="Attempted but failed" />
 
                     <RadioButton
-                        android:id="@+id/notAttempMTele"
+                        android:id="@+id/rb_notAttempMTele"
                         android:layout_width="wrap_content"
                         android:layout_height="50dp"
                         android:ems="9"
