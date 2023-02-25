@@ -30,7 +30,6 @@ public class MatchScoutingFragment extends Fragment {
 
         binding = FragmentMatchScoutingBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
-        setUpSpinner();
 
 
         Button submit = root.findViewById(R.id.bt_submitMatch);
@@ -45,31 +44,6 @@ public class MatchScoutingFragment extends Fragment {
         });
 
         return root;
-    }
-
-    public void setUpSpinner(){
-        View root = binding.getRoot();
-
-        robotSpinner = root.findViewById(R.id.robotSpinner);
-
-        ArrayAdapter<CharSequence> robotAdapter = ArrayAdapter.createFromResource(root.getContext(), R.array.robotNumber, android.R.layout.simple_spinner_item);
-
-        robotAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-
-        robotSpinner.setAdapter(robotAdapter);
-
-        robotSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                String choice = parent.getItemAtPosition(position).toString();
-                Toast.makeText(binding.getRoot().getContext(),choice,Toast.LENGTH_LONG).show();
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> adapterView) {
-
-            }
-        });
     }
 
 }
