@@ -68,9 +68,9 @@ public class PitScouting extends Fragment {
 
 
                 //text input layout
-                Button submitPit = root.findViewById(R.id.bt_submitPit);
+        Button submitPit = root.findViewById(R.id.bt_submitPit);
 
-                pitTeamNumber = root.findViewById(R.id.til_pitTeamNumber);
+        pitTeamNumber = root.findViewById(R.id.til_pitTeamNumber);
 
         pitScouterName = root.findViewById(R.id.til_pitScouterName);
 
