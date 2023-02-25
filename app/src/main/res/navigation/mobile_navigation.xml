@@ -12,12 +12,6 @@
         tools:layout="@layout/content_main" />
 
     <fragment
-        android:id="@+id/nav_match_scouting_start"
-        android:name="com.example.lapislazuli.Fragments.MatchScoutingStartFragment"
-        android:label="matchScouting"
-        tools:layout="@layout/fragment_match_scouting_start" />
-
-    <fragment
         android:id="@+id/nav_pit_scouting"
         android:name="com.example.lapislazuli.Fragments.PitScouting"
         android:label="pitScouting"

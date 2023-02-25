@@ -49,7 +49,6 @@ public class PitScouting extends Fragment {
         binding = FragmentPitScoutingBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        Button submit = root.findViewById(R.id.bt_submitPit);
         submitPit.setOnClickListener(new View.OnClickListener(){
 
 
