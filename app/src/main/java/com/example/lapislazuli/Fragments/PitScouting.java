@@ -47,8 +47,7 @@ public class PitScouting extends Fragment {
 
     DatabaseReference reference;
 
-
-        private FragmentPitScoutingBinding binding;
+    private FragmentPitScoutingBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         binding = FragmentPitScoutingBinding.inflate(inflater, container, false);
