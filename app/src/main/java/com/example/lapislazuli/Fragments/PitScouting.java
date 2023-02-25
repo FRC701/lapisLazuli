@@ -14,7 +14,6 @@ import androidx.navigation.Navigation;
 import android.widget.CheckBox;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.view.View;
 
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.database.DataSnapshot;
@@ -54,7 +53,7 @@ public class PitScouting extends Fragment {
         binding = FragmentPitScoutingBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        Button submitPit = root.findViewById(R.id.bt_submitPit);
+
 
 
         submitPit.setOnClickListener(new View.OnClickListener(){
@@ -68,7 +67,7 @@ public class PitScouting extends Fragment {
 
 
                 //text input layout
-        Button submitPit = root.findViewById(R.id.bt_submitPit);
+        submitPit = root.findViewById(R.id.bt_submitPit);
 
         pitTeamNumber = root.findViewById(R.id.til_pitTeamNumber);
 
