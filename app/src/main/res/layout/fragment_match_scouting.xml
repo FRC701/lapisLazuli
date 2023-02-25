@@ -258,14 +258,14 @@
                         android:orientation="horizontal">
 
                         <RadioButton
-                            android:id="@+id/bt_attempMAuto"
+                            android:id="@+id/rb_attempMAuto"
                             android:layout_width="wrap_content"
                             android:layout_height="50dp"
                             android:ems="11"
                             android:text="Attempted but failed" />
 
                         <RadioButton
-                            android:id="@+id/notAttempMAuto"
+                            android:id="@+id/rb_notAttempMAuto"
                             android:layout_width="wrap_content"
                             android:layout_height="50dp"
                             android:ems="11"
@@ -554,15 +554,15 @@
                         android:layout_height="match_parent"
                         android:orientation="horizontal">
 
-                        <RadioButton
-                            android:id="@+id/bt_attempMTele"
+                         <RadioButton
+                            android:id="@+id/rb_attempMTele"
                             android:layout_width="wrap_content"
                             android:layout_height="50dp"
                             android:ems="11"
                             android:text="Attempted but failed" />
 
                         <RadioButton
-                            android:id="@+id/notAttempMTele"
+                            android:id="@+id/rb_notAttempMTele"
                             android:layout_width="wrap_content"
                             android:layout_height="50dp"
                             android:ems="11"
