@@ -258,14 +258,14 @@
                         android:orientation="horizontal">
 
                         <RadioButton
-                            android:id="@+id/rb_attempMAuto"
+                            android:id="@+id/bt_attempMAuto"
                             android:layout_width="wrap_content"
                             android:layout_height="50dp"
                             android:ems="11"
                             android:text="Attempted but failed" />
 
                         <RadioButton
-                            android:id="@+id/rb_notAttempMAuto"
+                            android:id="@+id/notAttempMAuto"
                             android:layout_width="wrap_content"
                             android:layout_height="50dp"
                             android:ems="11"
@@ -555,7 +555,7 @@
                         android:orientation="horizontal">
 
                         <RadioButton
-                            android:id="@+id/bt_attemptMTele"
+                            android:id="@+id/bt_attempMTele"
                             android:layout_width="wrap_content"
                             android:layout_height="50dp"
                             android:ems="11"
@@ -571,17 +571,6 @@
 
                 </RadioGroup>
             </LinearLayout>
-
-            <View
-                android:id="@+id/view16"
-                android:layout_width="match_parent"
-                android:layout_height="10dp" />
-
-            <Button
-                android:id="@+id/bt_submitMatch"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Submit" />
 
         </LinearLayout>
     </ScrollView>
