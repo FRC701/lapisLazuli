@@ -456,39 +456,20 @@
                 android:id="@+id/tv_pitAutoActionsQues"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="what does your auto do?"
+                android:text="what does your auto?"
                 android:textAlignment="center"
                 android:textSize="20sp" />
 
-            <LinearLayout
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_pitAutoActions"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
+                android:layout_height="match_parent">
 
-                <CheckBox
-                    android:id="@+id/cb_pitAutoMobility"
-                    android:layout_width="wrap_content"
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="mobility" />
-
-                <CheckBox
-                    android:id="@+id/cb_pitAutoPickUpCone"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="pick up cone" />
-
-                <CheckBox
-                    android:id="@+id/cb_pitAutoPickUpCube"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="pick up cube" />
-
-                <CheckBox
-                    android:id="@+id/cb_pitAutoDock"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="dock" />
-            </LinearLayout>
+                    android:hint="ex: mobility, pick up cube etc" />
+            </com.google.android.material.textfield.TextInputLayout>
 
             <View
                 android:layout_width="match_parent"

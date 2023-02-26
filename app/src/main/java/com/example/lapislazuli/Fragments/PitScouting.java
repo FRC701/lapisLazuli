@@ -31,11 +31,9 @@ public class PitScouting extends Fragment {
 
     PitSavingClass PitSavingClass;
 
-    TextInputLayout pitTeamNumber, pitScouterName, pitRobotWeight, pitRobotDimensions, pitRobotSpeed, pitSettingShiftingGearbox, pitDriveTrainType, pitIntakeType, pitLiftingMechanismType, pitRobotProgrammingLanguage, pitAppProgrammingLanguage, pitCubeConeAmount, pitTeleopCycleTime, pitTeleopNodes, pitEndgamePlatformSuccess;
+    TextInputLayout pitTeamNumber, pitScouterName, pitRobotWeight, pitRobotDimensions, pitRobotSpeed, pitSettingShiftingGearbox, pitDriveTrainType, pitIntakeType, pitLiftingMechanismType, pitRobotProgrammingLanguage, pitAppProgrammingLanguage, pitCubeConeAmount, pitAutoActions, pitTeleopCycleTime, pitTeleopNodes, pitEndgamePlatformSuccess;
 
     RadioButton pitClosedChassis, pitOpenChassis, pitYesShiftingGearbox, pitNoShiftingGearbox, pitYesAuto, pitNoAuto, pitAutoPreloadCone, pitAutoPreloadCube, pitAutoPreloadNo, pitTeleopScoringPreferenceCone, pitTeleopScoringPreferenceCube, pitTeleopScoringPreferenceNoPreference, pitTeleopScoringPreferenceNeither, pitTeleopScoringPreferenceDefense, pitEndGamePlatformYes, pitEndGamePlatformNo;
-
-    CheckBox pitAutoMobility, pitAutoPickUpCone, pitAutoPickUpCube, pitAutoDock;
 
     int i = 0;
 
@@ -79,6 +77,8 @@ public class PitScouting extends Fragment {
                 pitAppProgrammingLanguage = root.findViewById(R.id.til_pitAppProgrammingLanguage);
 
                 pitCubeConeAmount = root.findViewById(R.id.til_pitCubeConeAmount);
+
+                pitAutoActions = root.findViewById(R.id.til_pitAutoActions);
 
                 pitTeleopCycleTime = root.findViewById(R.id.til_pitTeleopCycleTime);
 
@@ -209,6 +209,9 @@ public class PitScouting extends Fragment {
                         PitSavingClass.setPitCubeConeAmount(pitCubeConeAmount.getEditText().getText().toString());
                         reference.child(String.valueOf(i+1)).setValue(PitSavingClass);
 
+                        PitSavingClass.setPitAutoActions(pitAutoActions.getEditText().getText().toString());
+                        reference.child(String.valueOf(i+1)).setValue(PitSavingClass);
+
                         PitSavingClass.setPitTeleopCycleTime(pitTeleopCycleTime.getEditText().getText().toString());
                         reference.child(String.valueOf(i+1)).setValue(PitSavingClass);
 
@@ -285,36 +288,6 @@ public class PitScouting extends Fragment {
                             PitSavingClass.setPitEndGamePlatformQues(pitPlatformN);
                             reference.child(String.valueOf(i+1)).setValue(PitSavingClass);
                         }
-
-
-
-                        //checkboxes
-                        if(pitAutoMobility.isChecked()){
-                            PitSavingClass.setPitAutoMobility(one);
-                            reference.child(String.valueOf(i+1)).setValue(PitSavingClass);
-                        } else{
-
-                        }
-                        if(pitAutoPickUpCone.isChecked()){
-                            PitSavingClass.setPitAutoPickUpCone(two);
-                            reference.child(String.valueOf(i+1)).setValue(PitSavingClass);
-                        } else{
-
-                        }
-                        if(pitAutoPickUpCube.isChecked()){
-                            PitSavingClass.setPitAutoPickUpCube(three);
-                            reference.child(String.valueOf(i+1)).setValue(PitSavingClass);
-                        } else{
-
-                        }
-                        if(pitAutoDock.isChecked()){
-                            PitSavingClass.setPitAutoDock(four);
-                            reference.child(String.valueOf(i+1)).setValue(PitSavingClass);
-                        } else{
-
-                        }
-
-
 
                     }
 

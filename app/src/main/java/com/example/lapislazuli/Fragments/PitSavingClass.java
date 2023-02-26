@@ -17,6 +17,7 @@ public class PitSavingClass {
     String pitRobotProgrammingLanguage;
     String pitAppProgrammingLanguage;
     String pitCubeConeAmount;
+    String pitAutoActions;
     String pitTeleopCycleTime;
     String pitTeleopNodes;
     String pitEndgamePlatformSuccess;
@@ -29,64 +30,6 @@ public class PitSavingClass {
     String pitAutoPreloadQues;
     String pitTeleopScoringPreferenceQues;
     String pitEndGamePlatformQues;
-
-    //checkbox
-
-    String pitAutoActions;
-
-    //checkbox options
-
-    private String pitAutoMobility;
-
-    private String pitAutoPickUpCone;
-
-    private String pitAutoPickUpCube;
-
-    private String pitAutoDock;
-
-    //checkbox
-
-    public String getPitAutoActions(){return pitAutoActions;}
-    public void setPitAutoActions(String pitAutoActions){this.pitAutoActions = pitAutoActions;}
-
-
-
-
-    public String getPitAutoMobility() {
-        return pitAutoMobility;
-    }
-
-    public void setPitAutoMobility(String pitAutoMobility) {
-        this.pitAutoMobility = pitAutoMobility;
-    }
-
-
-    public String getPitAutoPickUpCone() {
-        return pitAutoPickUpCone;
-    }
-
-    public void setPitAutoPickUpCone(String pitAutoPickUpCone) {
-        this.pitAutoPickUpCone = pitAutoPickUpCone;
-    }
-
-
-    public String getPitAutoPickUpCube() {
-        return pitAutoPickUpCube;
-    }
-
-    public void setPitAutoPickUpCube(String pitAutoPickUpCube) {
-        this.pitAutoPickUpCube = pitAutoPickUpCube;
-    }
-
-
-    public String getPitAutoDock() {
-        return pitAutoDock;
-    }
-
-    public void setPitAutoDock(String pitAutoDock) {
-        this.pitAutoDock = pitAutoDock;
-    }
-
 
 //radio button
 
@@ -162,6 +105,8 @@ public class PitSavingClass {
     public String getPitCubeConeAmount(){return pitCubeConeAmount;}
     public void setPitCubeConeAmount(String pitCubeConeAmount){this.pitCubeConeAmount = pitCubeConeAmount;}
 
+    public String getPitAutoActions(){return pitAutoActions;}
+    public void setPitAutoActions(String pitAutoActions){this.pitAutoActions = pitAutoActions;}
 
     public String getPitTeleopCycleTime(){return pitTeleopCycleTime;}
     public void setPitTeleopCycleTime(String pitTeleopCycleTime){this.pitTeleopCycleTime = pitTeleopCycleTime;}

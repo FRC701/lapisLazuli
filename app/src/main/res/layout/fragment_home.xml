@@ -86,7 +86,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-smallcaps"
-                android:text="fatima angulo-barba and charlotte rains"
+                android:text="fatima angulo barba and charlotte rains"
                 android:textAlignment="center"
                 android:textSize="16dp" />
 
