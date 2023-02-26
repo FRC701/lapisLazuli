@@ -9,11 +9,9 @@ public class MatchSavingClass {
     String numOnUpperMAuto;
     String numOnMidMAuto;
     String numOnBottomRowMAuto;
-    String numOfLinksMAutos;
     String numOnUpperMTele;
     String numOnMidMTele;
     String numOnBottomRowMTele;
-    String numOfLinksMTele;
 
     //radio buttons
     String yesMobility;
@@ -87,14 +85,6 @@ public class MatchSavingClass {
         this.numOnBottomRowMAuto = numOnBottomRowMAuto;
     }
 
-    public String getNumOfLinksMAutos() {
-        return numOfLinksMAutos;
-    }
-
-    public void setNumOfLinksMAutos(String numOfLinksMAutos) {
-        this.numOfLinksMAutos = numOfLinksMAutos;
-    }
-
     public String getNumOnUpperMTele() {
         return numOnUpperMTele;
     }
@@ -117,14 +107,6 @@ public class MatchSavingClass {
 
     public void setNumOnBottomRowMTele(String numOnBottomRowMTele) {
         this.numOnBottomRowMTele = numOnBottomRowMTele;
-    }
-
-    public String getNumOfLinksMTele() {
-        return numOfLinksMTele;
-    }
-
-    public void setNumOfLinksMTele(String numOfLinksMTele) {
-        this.numOfLinksMTele = numOfLinksMTele;
     }
 
     public String getYesMobility() {

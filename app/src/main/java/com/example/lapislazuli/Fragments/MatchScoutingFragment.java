@@ -56,11 +56,9 @@ public class MatchScoutingFragment extends Fragment {
         numOnUpperMAuto = root.findViewById(R.id.til_numOnUpperMAuto);
         numOnMidMAuto = root.findViewById(R.id.til_numOnMidMAuto);
         numOnBottomRowMAuto = root.findViewById(R.id.til_numOnBottomRowMAuto);
-        numOfLinksMAutos = root.findViewById(R.id.til_numOfLinksMAutos);
         numOnUpperMTele = root.findViewById(R.id.til_numOnUpperMTele);
         numOnMidMTele = root.findViewById(R.id.til_numOnMidMTele);
         numOnBottomRowMTele = root.findViewById(R.id.til_numOnBottomRowMTele);
-        numOfLinksMTele = root.findViewById(R.id.til_numofLinksMTele);
 
         //radio buttons
         yesMobility = root.findViewById(R.id.rb_yesMobility);
@@ -148,9 +146,6 @@ public class MatchScoutingFragment extends Fragment {
                 matchSavingClass.setNumOnBottomRowMAuto(numOnBottomRowMAuto.getEditText().getText().toString());
                 reference.child(String.valueOf(i+1)).setValue(matchSavingClass);
 
-                matchSavingClass.setNumOfLinksMAutos(numOfLinksMAutos.getEditText().getText().toString());
-                reference.child(String.valueOf(i+1)).setValue(matchSavingClass);
-
                 matchSavingClass.setNumOnUpperMTele(numOnUpperMTele.getEditText().getText().toString());
                 reference.child(String.valueOf(i+1)).setValue(matchSavingClass);
 
@@ -158,9 +153,6 @@ public class MatchScoutingFragment extends Fragment {
                 reference.child(String.valueOf(i+1)).setValue(matchSavingClass);
 
                 matchSavingClass.setNumOnBottomRowMTele(numOnBottomRowMTele.getEditText().getText().toString());
-                reference.child(String.valueOf(i+1)).setValue(matchSavingClass);
-
-                matchSavingClass.setNumOfLinksMTele(numOfLinksMTele.getEditText().getText().toString());
                 reference.child(String.valueOf(i+1)).setValue(matchSavingClass);
 
                 //radio buttons again
