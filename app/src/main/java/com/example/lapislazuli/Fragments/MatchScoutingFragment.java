@@ -32,8 +32,8 @@ public class MatchScoutingFragment extends Fragment {
     private FragmentMatchScoutingBinding binding;
     Button scout;
     MatchSavingClass matchSavingClass;
-    TextInputLayout teamNum, matchNum, robotNum, initials, numOnUpperMAuto, numOnMidMAuto, numOnBottomRowMAuto, numOfLinksMAutos,
-            numOnUpperMTele, numOnMidMTele, numOnBottomRowMTele, numOfLinksMTele;
+    TextInputLayout teamNum, matchNum, robotNum, initials, numOnUpperMAuto, numOnMidMAuto, numOnBottomRowMAuto,
+            numOnUpperMTele, numOnMidMTele, numOnBottomRowMTele, comment;
     RadioButton yesMobility, noMobility, engagedMAuto, dockedMAuto, attempMAuto, notAtempMAuto, groundIntakeMTele, substationIntakeMTele,
             bothIntakeMTele, neitherIntakeMTele, engagedMTele, dockedMTele, attempMTele, notAttepMTele;
     int i = 0;
@@ -59,6 +59,7 @@ public class MatchScoutingFragment extends Fragment {
         numOnUpperMTele = root.findViewById(R.id.til_numOnUpperMTele);
         numOnMidMTele = root.findViewById(R.id.til_numOnMidMTele);
         numOnBottomRowMTele = root.findViewById(R.id.til_numOnBottomRowMTele);
+        comment = root.findViewById(R.id.til_comments);
 
         //radio buttons
         yesMobility = root.findViewById(R.id.rb_yesMobility);
@@ -153,6 +154,9 @@ public class MatchScoutingFragment extends Fragment {
                 reference.child(String.valueOf(i+1)).setValue(matchSavingClass);
 
                 matchSavingClass.setNumOnBottomRowMTele(numOnBottomRowMTele.getEditText().getText().toString());
+                reference.child(String.valueOf(i+1)).setValue(matchSavingClass);
+
+                matchSavingClass.setTeamNum(comment.getEditText().getText().toString());
                 reference.child(String.valueOf(i+1)).setValue(matchSavingClass);
 
                 //radio buttons again
