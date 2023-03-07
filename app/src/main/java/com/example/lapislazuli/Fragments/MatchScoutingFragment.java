@@ -32,8 +32,8 @@ public class MatchScoutingFragment extends Fragment {
     private FragmentMatchScoutingBinding binding;
     Button scout;
     MatchSavingClass matchSavingClass;
-    TextInputLayout teamNum, matchNum, robotNum, initials, numOnUpperMAuto, numOnMidMAuto, numOnBottomRowMAuto, numOfLinksMAutos,
-            numOnUpperMTele, numOnMidMTele, numOnBottomRowMTele, numOfLinksMTele;
+    TextInputLayout teamNum, matchNum, robotNum, initials, numOnUpperMAuto, numOnMidMAuto, numOnBottomRowMAuto,
+            numOnUpperMTele, numOnMidMTele, numOnBottomRowMTele, comment;
     RadioButton yesMobility, noMobility, engagedMAuto, dockedMAuto, attempMAuto, notAtempMAuto, groundIntakeMTele, substationIntakeMTele,
             bothIntakeMTele, neitherIntakeMTele, engagedMTele, dockedMTele, attempMTele, notAttepMTele;
     int i = 0;
@@ -153,6 +153,9 @@ public class MatchScoutingFragment extends Fragment {
                 reference.child(String.valueOf(i+1)).setValue(matchSavingClass);
 
                 matchSavingClass.setNumOnBottomRowMTele(numOnBottomRowMTele.getEditText().getText().toString());
+                reference.child(String.valueOf(i+1)).setValue(matchSavingClass);
+
+                matchSavingClass.setNumOnBottomRowMTele(comment.getEditText().getText().toString());
                 reference.child(String.valueOf(i+1)).setValue(matchSavingClass);
 
                 //radio buttons again
