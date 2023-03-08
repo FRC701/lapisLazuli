@@ -156,7 +156,7 @@ public class MatchScoutingFragment extends Fragment {
                 matchSavingClass.setNumOnBottomRowMTele(numOnBottomRowMTele.getEditText().getText().toString());
                 reference.child(String.valueOf(i+1)).setValue(matchSavingClass);
 
-                matchSavingClass.setNumOnBottomRowMTele(comment.getEditText().getText().toString());
+                matchSavingClass.setComment(comment.getEditText().getText().toString());
                 reference.child(String.valueOf(i+1)).setValue(matchSavingClass);
 
                 //radio buttons again
