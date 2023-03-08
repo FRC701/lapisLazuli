@@ -12,6 +12,7 @@ public class MatchSavingClass {
     String numOnUpperMTele;
     String numOnMidMTele;
     String numOnBottomRowMTele;
+    String comment;
 
     //radio buttons
     String yesMobility;
@@ -107,6 +108,14 @@ public class MatchSavingClass {
 
     public void setNumOnBottomRowMTele(String numOnBottomRowMTele) {
         this.numOnBottomRowMTele = numOnBottomRowMTele;
+    }
+
+    public String getComment() {
+        return comment;
+    }
+
+    public void setComment(String comment) {
+        this.comment = comment;
     }
 
     public String getYesMobility() {
