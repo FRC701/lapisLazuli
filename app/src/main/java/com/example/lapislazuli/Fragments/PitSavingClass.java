@@ -19,6 +19,8 @@ public class PitSavingClass {
     String pitCubeConeAmount;
     String pitAutoActions;
     String pitTeleopCycleTime;
+
+    String pitTeleopNodeLvlPref;
     String pitTeleopNodes;
     String pitEndgamePlatformSuccess;
 
@@ -111,7 +113,8 @@ public class PitSavingClass {
     public String getPitTeleopCycleTime(){return pitTeleopCycleTime;}
     public void setPitTeleopCycleTime(String pitTeleopCycleTime){this.pitTeleopCycleTime = pitTeleopCycleTime;}
 
-
+    public String getPitTeleopNodeLvlPref(){return pitTeleopNodeLvlPref;}
+    public void setPitTeleopNodeLvlPref(String pitTeleopNodeLvlPref){this.pitTeleopNodeLvlPref = pitTeleopNodeLvlPref;}
     public String getPitTeleopNodes(){return pitTeleopNodes;}
     public void setPitTeleopNodes(String pitTeleopNodes){this.pitTeleopNodes = pitTeleopNodes;}
 

@@ -31,7 +31,7 @@ public class PitScouting extends Fragment {
 
     PitSavingClass PitSavingClass;
 
-    TextInputLayout pitTeamNumber, pitScouterName, pitRobotWeight, pitRobotDimensions, pitRobotSpeed, pitSettingShiftingGearbox, pitDriveTrainType, pitIntakeType, pitLiftingMechanismType, pitRobotProgrammingLanguage, pitAppProgrammingLanguage, pitCubeConeAmount, pitAutoActions, pitTeleopCycleTime, pitTeleopNodes, pitEndgamePlatformSuccess;
+    TextInputLayout pitTeamNumber, pitScouterName, pitRobotWeight, pitRobotDimensions, pitRobotSpeed, pitSettingShiftingGearbox, pitDriveTrainType, pitIntakeType, pitLiftingMechanismType, pitRobotProgrammingLanguage, pitAppProgrammingLanguage, pitCubeConeAmount, pitAutoActions, pitTeleopCycleTime, pitTeleopNodeLvlPref, pitTeleopNodes, pitEndgamePlatformSuccess;
 
     RadioButton pitClosedChassis, pitOpenChassis, pitYesShiftingGearbox, pitNoShiftingGearbox, pitYesAuto, pitNoAuto, pitAutoPreloadCone, pitAutoPreloadCube, pitAutoPreloadNo, pitTeleopScoringPreferenceCone, pitTeleopScoringPreferenceCube, pitTeleopScoringPreferenceNoPreference, pitTeleopScoringPreferenceNeither, pitTeleopScoringPreferenceDefense, pitEndGamePlatformYes, pitEndGamePlatformNo;
 
@@ -81,6 +81,8 @@ public class PitScouting extends Fragment {
                 pitAutoActions = root.findViewById(R.id.til_pitAutoActions);
 
                 pitTeleopCycleTime = root.findViewById(R.id.til_pitTeleopCycleTime);
+
+                pitTeleopNodeLvlPref = root.findViewById(R.id.til_pitTeleopNodeLvlPref);
 
                 pitTeleopNodes = root.findViewById(R.id.til_pitTeleopNodes);
 
@@ -213,6 +215,9 @@ public class PitScouting extends Fragment {
                         reference.child(String.valueOf(i+1)).setValue(PitSavingClass);
 
                         PitSavingClass.setPitTeleopCycleTime(pitTeleopCycleTime.getEditText().getText().toString());
+                        reference.child(String.valueOf(i+1)).setValue(PitSavingClass);
+
+                        PitSavingClass.setPitTeleopNodeLvlPref(pitTeleopNodeLvlPref.getEditText().getText().toString());
                         reference.child(String.valueOf(i+1)).setValue(PitSavingClass);
 
                         PitSavingClass.setPitTeleopNodes(pitTeleopNodes.getEditText().getText().toString());

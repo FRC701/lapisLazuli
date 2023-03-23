@@ -456,7 +456,7 @@
                 android:id="@+id/tv_pitAutoActionsQues"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="what does your auto?"
+                android:text="what does your auto do?"
                 android:textAlignment="center"
                 android:textSize="20sp" />
 
@@ -604,6 +604,31 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="ex: 7 seconds" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp" />
+
+            <!-- TEXT INPUT -->
+
+            <TextView
+                android:id="@+id/tv_pitTeleopNodeLvlQuesPref"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="do you have a node level preference?"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_pitTeleopNodeLvlPref"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="ex: mid, high, ground" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <View
