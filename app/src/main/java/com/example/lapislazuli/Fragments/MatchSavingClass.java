@@ -1,6 +1,8 @@
 package com.example.lapislazuli.Fragments;
 
 public class MatchSavingClass {
+
+
     //text input layout
     String teamNum;
     String matchNum;
